@@ -11,6 +11,7 @@ import Data.Loc (SrcLoc, noLoc)
 import Language.C.Quote.C
 import qualified Language.C.Syntax as C
 import Numeric (showHex)
+import Objc (objcTests)
 import System.Exit (exitFailure, exitSuccess)
 
 #if !MIN_VERSION_template_haskell(2,7,0)
@@ -32,7 +33,7 @@ tests = [exp_id,
          exp_exp, exp_func, exp_args, exp_decl, exp_sdecl,
          exp_enum, exp_edecl, exp_stm, exp_param, exp_ty,
          pat_args, exp_hexp,
-         exp_init, exp_inits, exp_item]
+         exp_init, exp_inits, exp_item] ++ objcTests
 
 exp_id :: Test
 exp_id = testCase "exp id" $

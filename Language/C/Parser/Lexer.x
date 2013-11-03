@@ -115,6 +115,23 @@ c :-
  "$init:"    / { allowAnti } { lexAnti Tanti_init }
  "$inits:"   / { allowAnti } { lexAnti Tanti_inits }
  "$"         / { allowAnti } { lexAnti Tanti_exp }
+
+ --
+ -- Objective C
+ --
+ "$prop:"       / { allowAnti } { lexAnti Tanti_objc_prop }
+ "$props:"      / { allowAnti } { lexAnti Tanti_objc_props }
+ "$propattr:"   / { allowAnti } { lexAnti Tanti_objc_prop_attr }
+ "$propattrs:"  / { allowAnti } { lexAnti Tanti_objc_prop_attrs }
+ "$dictelems:"  / { allowAnti } { lexAnti Tanti_objc_dicts }
+ "$methparam:"  / { allowAnti } { lexAnti Tanti_objc_param }
+ "$methparams:" / { allowAnti } { lexAnti Tanti_objc_params }
+ "$methproto:"  / { allowAnti } { lexAnti Tanti_objc_method_proto }
+ "$methdef:"    / { allowAnti } { lexAnti Tanti_objc_method_def }
+ "$methdefs:"   / { allowAnti } { lexAnti Tanti_objc_method_defs }
+ "$recv:"       / { allowAnti } { lexAnti Tanti_objc_recv }
+ "$kwarg:"      / { allowAnti } { lexAnti Tanti_objc_arg }
+ "$kwargs:"     / { allowAnti } { lexAnti Tanti_objc_args }
 }
 
 <0> {
